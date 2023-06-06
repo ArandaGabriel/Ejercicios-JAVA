@@ -38,8 +38,6 @@ public class AlumnoService {
         } while (confirmacion);
         
         return alumnos;
-       
-      
     }
     
     public double notaFinal(Alumno alu){
@@ -53,10 +51,7 @@ public class AlumnoService {
         
         double promedio = sumaNotas /3;
         
-        //System.out.println("La nota final es: " + promedio);
-        
         return promedio;
-        
     }
     
     public double buscarAlumno(ArrayList <Alumno> alumnos){
@@ -76,8 +71,6 @@ public class AlumnoService {
             if(alu.getNombre().equalsIgnoreCase(alumnoABuscar)){
                 aux = true;
                 return notaFinal(alu);
-                
-               
             }
         } 
        

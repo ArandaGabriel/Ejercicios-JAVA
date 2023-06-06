@@ -13,7 +13,9 @@ public class Ejercicio3 {
         
         System.out.println(alumnos.toString());
         
-        AS1.buscarAlumno(alumnos);
+        double promedio = AS1.buscarAlumno(alumnos);
+        System.out.println("El promedio del alumno es: " + promedio);
+        
     }
 
 }
