@@ -34,8 +34,7 @@ public class CafeteraServicio {
             
         }  
         System.out.println("");
-      
-        
+              
     }
     
     public void vaciarCafetera(){
