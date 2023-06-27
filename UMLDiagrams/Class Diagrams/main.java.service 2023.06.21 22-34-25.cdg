@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="main.java.service">
+  <ClassDiagramComponents>
+    <Class name="BarajaService" package="service" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="cont" type="int" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="crearBaraja" returnType="void" visibility="public">
+          <Argument type="Baraja" name="b"/>
+        </Method>
+        <Method name="siguienteCarta" returnType="void" visibility="public">
+          <Argument type="Baraja" name="b"/>
+          <Argument type="Scanner" name="leer"/>
+        </Method>
+        <Method name="cartasDisponibles" returnType="void" visibility="public"/>
+        <Method name="darCartas" returnType="void" visibility="public">
+          <Argument type="Baraja" name="b"/>
+          <Argument type="Scanner" name="leer"/>
+        </Method>
+        <Method name="cartasMonton" returnType="void" visibility="public">
+          <Argument type="Baraja" name="b"/>
+          <Argument type="Scanner" name="leer"/>
+        </Method>
+        <Method name="mostrarBaraja" returnType="void" visibility="public">
+          <Argument type="Baraja" name="b"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="JuegoService" package="service" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="llenarJuego" returnType="void" visibility="public">
+          <Argument type="RevolverService" name="RS"/>
+          <Argument type="List&lt;Jugador&gt;" name="Jugadores"/>
+          <Argument type="Revolver" name="rev"/>
+        </Method>
+        <Method name="ronda" returnType="void" visibility="public">
+          <Argument type="JugadorService" name="JS"/>
+          <Argument type="RevolverService" name="RS"/>
+          <Argument type="List&lt;Jugador&gt;" name="Jugadores"/>
+          <Argument type="Revolver" name="rev"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="JugadorService" package="service" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="disparoRevolver" returnType="void" visibility="public">
+          <Argument type="RevolverService" name="rs"/>
+          <Argument type="Revolver" name="revolver"/>
+          <Argument type="Jugador" name="jugador"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="RevolverService" package="service" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="llenarRevolver" returnType="void" visibility="public">
+          <Argument type="Revolver" name="revolver"/>
+        </Method>
+        <Method name="mojar" returnType="boolean" visibility="public">
+          <Argument type="Revolver" name="revolver"/>
+        </Method>
+        <Method name="siguienteChorro" returnType="void" visibility="public">
+          <Argument type="Revolver" name="revolver"/>
+        </Method>
+        <Method name="toString" returnType="void" visibility="public">
+          <Argument type="Revolver" name="revolver"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="service.JugadorService" target="service.RevolverService" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="service.JuegoService" target="service.RevolverService" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
